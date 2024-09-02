@@ -25,10 +25,10 @@ import sys
 
 import test_utils
 sys.meta_path.append(test_utils.NotebookFinder())
-loaded = test_utils.NotebookLoader("./unit_1_hw.ipynb")
-loaded.load_module("unit_1_hw")
+loaded = test_utils.NotebookLoader("./unit_1_numpy_hw.ipynb")
+loaded.load_module("unit_1_numpy_hw")
 
-import unit_1_hw
+import unit_1_numpy_hw
 
 def test_some_test():
     return False
