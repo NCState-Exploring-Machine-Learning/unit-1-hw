@@ -38,7 +38,8 @@ jobs:
         python-version: "3.10"
     - name: Setup Secret Tests
       run: |
-        cp ./unit_1_numpy_hw.ipynb ./tests/unit_1_numpy_hw.ipynb
+        ls
+        cp ./unit_1_numpy_hw.ipynb ./unit-1-numpy-hw-secret-tests/tests/unit_1_numpy_hw.ipynb
         python -m pip install --upgrade pip
         cd ./unit-1-numpy-hw-secret-tests
         pip install -e .
