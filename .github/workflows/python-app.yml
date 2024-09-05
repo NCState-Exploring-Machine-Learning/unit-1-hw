@@ -47,6 +47,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Secret Tests
       run: |
+        ls
         cd ./tests
         var1=$(pytest | grep -A 100 "short test summary info")
         if [$var1==""]; then echo "You passed all tests!"; else echo $var1; fi
