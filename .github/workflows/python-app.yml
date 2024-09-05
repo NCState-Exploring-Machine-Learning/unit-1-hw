@@ -39,7 +39,7 @@ jobs:
     - name: Setup Secret Tests
       run: |
         ls
-        cp ./unit_1_numpy_hw.ipynb ./unit-1-numpy-hw-secret-tests/tests/unit_1_numpy_hw.ipynb
+        cp ./unit_1_numpy_hw.ipynb ./unit-1-numpy-hw-secret-tests/unit_1_numpy_hw.ipynb
         python -m pip install --upgrade pip
         cd ./unit-1-numpy-hw-secret-tests
         # pip install -e .
@@ -48,7 +48,7 @@ jobs:
     - name: Run Secret Tests
       run: |
         ls
-        cd ./unit-1-numpy-hw-secret-tests/tests
+        cd ./unit-1-numpy-hw-secret-tests/
         pytest
         # var1=$(pytest | grep -A 100 "short test summary info")
         # if [$var1==""]; then echo "You passed all tests!"; else echo $var1; fi
