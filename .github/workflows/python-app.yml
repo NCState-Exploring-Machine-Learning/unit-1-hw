@@ -50,4 +50,4 @@ jobs:
         cd ./unit-1-numpy-hw-secret-tests/
         var1=$(pytest | grep -A 100 "short test summary info")
         echo "$var1"
-        if [$var1==""]; then echo "You passed all tests!"; else error 1; fi
+        if ["$var1"==""]; then echo "You passed all tests!"; else exit 1; fi
