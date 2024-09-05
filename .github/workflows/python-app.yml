@@ -42,7 +42,7 @@ jobs:
         cp ./unit_1_numpy_hw.ipynb ./unit-1-numpy-hw-secret-tests/tests/unit_1_numpy_hw.ipynb
         python -m pip install --upgrade pip
         cd ./unit-1-numpy-hw-secret-tests
-        pip install -e .
+        # pip install -e .
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Secret Tests
