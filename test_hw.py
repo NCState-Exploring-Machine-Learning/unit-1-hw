@@ -45,8 +45,8 @@ def test_list_to_np_array():
     np3 = unit_1_numpy_hw.list_to_np_array(list3)
     arrays = [np1, np2, np3]
     for i, np_array in enumerate(arrays):
-        assert type(np_array) == np.ndarray, "Are you making a numpy array?"
-        assert len(np_array) != 0, "Your array is empty"
+        assert type(np_array) == np.ndarray, "Did not return numpy array"
+        assert len(np_array) != 0, "Your array is has zero length"
         for j, value in enumerate(np_array):
             assert lists[i][j] == value, "Value in array did not match value in list"
 
@@ -55,8 +55,8 @@ def test_np_array_of_ones():
     shapes = [10], [1, 19, 20], [2, 3, 8, 9, 12]
     for l in shapes:
         np_array = unit_1_numpy_hw.np_array_of_ones(l)
-        assert type(np_array) == np.ndarray, "Are you making a numpy array?"
-        assert len(np_array) != 0, "Your array is empty"
+        assert type(np_array) == np.ndarray, "Did not return numpy array"
+        assert len(np_array) != 0, "Your array is has zero length"
         # I dont really care if the student uses ones here
         assert list(np_array.shape) == l
 
@@ -73,7 +73,7 @@ def test_create_multi_dimensional_arrays():
     list_of_arrays = unit_1_numpy_hw.create_multi_dimensional_arrays()
     assert len(list_of_arrays) == 3, "Are you missing an array?"
     for np_array in list_of_arrays:
-        assert type(np_array) == np.ndarray, "Are you making a numpy array?"
+        assert type(np_array) == np.ndarray, "Did not return numpy array"
         assert len(np_array) != 0, "Your array is has zero length"
     
     assert list_of_arrays[0].shape == (2, 3, 8, 9)
@@ -87,7 +87,7 @@ def test_add_to_array():
     x = random.randrange(-999, 999)
     for array in arrays:
         np_array = unit_1_numpy_hw.add_to_array(array, x)
-        assert type(np_array) == np.ndarray, "Are you making a numpy array?"
+        assert type(np_array) == np.ndarray, "Did not return numpy array"
         assert len(np_array) != 0, "Your array is has zero length"
         for i, value in enumerate(np_array):
             assert value == array[i] + x, "Did not add correctly"
@@ -99,7 +99,7 @@ def test_subtract_from_array():
     x = random.randrange(-999, 999)
     for array in arrays:
         np_array = unit_1_numpy_hw.subtract_from_array(array, x)
-        assert type(np_array) == np.ndarray, "Are you making a numpy array?"
+        assert type(np_array) == np.ndarray, "Did not return numpy array"
         assert len(np_array) != 0, "Your array is has zero length"
         for i, value in enumerate(np_array):
             assert value == array[i] - x, "Did not subtract correctly"
@@ -112,7 +112,7 @@ def test_scale_array():
     x = random.randrange(-999, 999)
     for array in arrays:
         np_array = unit_1_numpy_hw.scale_array(array, x)
-        assert type(np_array) == np.ndarray, "Are you making a numpy array?"
+        assert type(np_array) == np.ndarray, "Did not return numpy array"
         assert len(np_array) != 0, "Your array is has zero length"
         for i, value in enumerate(np_array):
             assert value == array[i] * x, "Did not subtract correctly"
@@ -152,8 +152,3 @@ def test_slice_row():
     for i in range(0, 3):
         for j, value in enumerate(rand_array[0]):
             assert value == unit_1_numpy_hw.slice_row(rand_array)[0][j]
-
-
-    
-    
-
