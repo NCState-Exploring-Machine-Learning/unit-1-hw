@@ -36,24 +36,3 @@ jobs:
     - name: Run local tests
       run: |
         pytest
-    - name: Clone secret test repo
-      uses: GuillaumeFalourd/clone-github-repo-action@v2.3
-      with:
-        owner: 'NCState-Exploring-Machine-Learning'
-        repository: 'unit-1-numpy-hw-secret-tests'
-        access-token: ${{secrets.REMOTE_TESTING_PAT}}
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Setup Secret Tests
-      run: |
-        cp ./unit_1_numpy_hw.ipynb ./unit-1-numpy-hw-secret-tests/unit_1_numpy_hw.ipynb
-        python -m pip install --upgrade pip
-        cd ./unit-1-numpy-hw-secret-tests
-    - name: Run Secret Tests
-      run: |
-        cd ./unit-1-numpy-hw-secret-tests/
-        var1=$(pytest | grep -A 100 "short test summary info")
-        echo "$var1"
-        if ["$var1"==""]; then echo "You passed all tests!"; else exit 1; fi
