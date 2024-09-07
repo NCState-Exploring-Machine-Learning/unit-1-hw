@@ -152,3 +152,6 @@ def test_slice_row():
     for i in range(0, 3):
         for j, value in enumerate(rand_array[0]):
             assert value == unit_1_numpy_hw.slice_row(rand_array)[0][j]
+
+def test_secret_tests_acknowledgement():
+    assert unit_1_numpy_hw.secret_tests_acknowledgement() == True, "Please confirm acknowledgement the secret tests"

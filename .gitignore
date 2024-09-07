@@ -3,3 +3,4 @@ __pycache__
 test_hw.py
 test_utils.py
 test_file/*
+.github
