@@ -30,7 +30,7 @@ When you first start you will see every test is failing. Your goal is to pass ev
 
 # Secret Tests
 
-There are two test types, local tests and remote secret tests. Running pytest will show you your progress on all of the local tests, however you must upload you code (using the instructions in this readme) to verify you are passing the secret tests. Again you can get a 100 running pytest locally but this does not always translate to a 100 for the assignment. Check your remote remote for your actual score. 
+There are two test types, local tests and secret tests. Running pytest will show you your progress on all of the local tests, however you must upload you code (using the instructions in this readme) so that your instructor has access. They will then run the secret tests to determine a final score. This means a score of 100% using pytest does not always translate to a 100% on the assignment.
 
 # Explaining What is going on
 
